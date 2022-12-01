@@ -1,0 +1,55 @@
+<!doctype HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Bravo ! Vous avez terminé le quizz !</title>
+
+		<style>
+			.title_me{
+
+			}
+
+			.fill_me{
+				width: 50%;
+				position: absolute;
+				left: 25%;
+				top: 20%;				
+			}
+
+			.catch_me{
+				position: absolute;
+				left: 45%;
+				top: 30%;
+			}
+
+
+		</style>
+
+		<script>
+			function thisfunction() {
+				let submit_text = document.getElementById("submit_text").value;
+
+				if(submit_text === "" ){
+					let coord_x = Math.floor(Math.random() * 101); 
+					let coord_y = Math.floor(Math.random() * 101); 
+					let btn = document.getElementById("submit_button");
+					btn.style.left=coord_x+"%"
+					btn.style.top=coord_y+"%"
+
+
+				} else {
+					document.form_me.submit();
+				}
+			}
+		</script>
+
+
+	</head>
+	<body>
+		<h1> Rentre ton pseudo pour sauvegarder ton score dans le  ! </h1>
+		<form name="form_me" method="GET">
+			<input id="submit_text" class="fill_me" type="text" required="true">
+			<button id="submit_button" class="catch_me" type="submit" onClick="thisfunction();"> Rentre ton score </button>
+		</form>
+	</body>
+</html>
