@@ -1,0 +1,17 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		let url = window.location.href;
+		console.log(url);
+		let pseudo = url.split("="); 	
+		pseudo = pseudo[1];
+		console.log(pseudo);
+		json_answer = {
+			"pseudo":pseudo,
+			"note":"0/15"
+		}
+		const new_entry = JSON.stringify(json_answer);
+	</script>
+</head>
+</html>
