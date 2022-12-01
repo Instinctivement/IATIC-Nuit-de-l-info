@@ -5,10 +5,6 @@
 		<title> Bravo ! Vous avez terminé le quizz !</title>
 
 		<style>
-			.title_me{
-
-			}
-
 			.fill_me{
 				width: 50%;
 				position: absolute;
@@ -46,10 +42,10 @@
 
 	</head>
 	<body>
-		<h1> Rentre ton pseudo pour sauvegarder ton score dans le  ! </h1>
 		<form name="form_me" method="GET">
-			<input id="submit_text" class="fill_me" type="text" required="true">
-			<button id="submit_button" class="catch_me" type="submit" onClick="thisfunction();"> Rentre ton score </button>
+			<label for="submit_text">Rentre ton pseudo pour sauvegarder ton score dans le tableau des scores !</label>
+			<input id="submit_text" name="pseudo" class="fill_me" type="text" required="true">
+			<input id="submit_button" class="catch_me" type="submit" onClick="thisfunction();" value="Rentre ton pseudo">
 		</form>
 	</body>
 </html>
